@@ -1,4 +1,11 @@
 <p>
   card-container works!
 </p>
-<app-crop-card></app-crop-card>
+<div *ngIf="this.wantCrops">
+  <button (click)="toggleSelection()">Fish</button><br>
+  <app-crop-card></app-crop-card>
+</div>
+<div *ngIf="this.wantFish">
+    <button (click)="toggleSelection()">Crops</button><br>
+    <app-fish-card></app-fish-card>
+  </div>

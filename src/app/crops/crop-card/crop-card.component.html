@@ -1,7 +1,7 @@
-<div class="crop-container">
- <div class="name"><h3>{{name}}</h3></div>
- <h4>Cost:{{cost}}g Sells:{{harvestValue}}g GPD:{{gpd}}g/d</h4>
- <h4>Grows during {{season}} in:{{growthTime}} days</h4>
- <h4> If regrowth regrowth and regrowth time</h4>
- <h4>({{additonal}})</h4>
+<div class="crop-container" *ngFor="let crop of crops; index as i">
+ <div class="name"><h3>{{crop.name}}</h3></div>
+ <h4>Cost:{{crop.cost}}g Sells:{{crop.harvestValue}}g GPD:{{crop.gpd}}g/d</h4>
+ <h4>Grows during {{crop.season}} in {{crop.growthTime}} days</h4>
+ <div *ngIf=crop.regrowth>regrowth every {{crop.regrowthTime}} days</div>
+ <h4>{{crop.additonal}}</h4>
 </div>
