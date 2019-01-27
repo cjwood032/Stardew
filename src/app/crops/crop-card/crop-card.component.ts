@@ -23,7 +23,7 @@ export class CropCardComponent implements OnInit {
       new Crop("Strawberry", "Spring", 8, 100, true, 4, 120, 20.83, "Only avail at egg fest"),
       new Crop("Tulip", "Spring", 6, 20, false, 0, 30, 1.67, ""),
       new Crop("Blueberry", "Summer", 13, 80, true, 4, 50, 20.8, "3 blueberries per harvest"),
-      new Crop("Corn", "Summer/Fall", 14, 150, true, 4, 50, 1.92, " GPD = 7.41 over 2 seasons "),
+     
       new Crop("Hops", "Summer", 11, 60, true, 1, 25, 13.52, "Trellis"),
       new Crop("Hot pepper", "Summer", 5, 40, true, 3, 40, 10.77, ""),
       new Crop("Melon", "Summer", 12, 80, false, 0, 250, 14.17, "Can become giant"),
@@ -32,8 +32,9 @@ export class CropCardComponent implements OnInit {
       new Crop("Red Cabbage", "Summer", 9, 100, false, 0, 260, 17.78, "available starting year 2"),
       new Crop("Starfruit", "Summer", 13, 400, false, 0, 750, 26.92, "only avail at oasis"),
       new Crop("Summer Spangle", "Summer", 8, 50, false, 0, 90, 5, ""),
-      new Crop("Sunflower", "Summer", 8, 200, false, 0, 80, -15, "Harvest also gets 0-3 sunflower seeds"),
+      new Crop("Sunflower", "Summer", 8, 200, false, 0, 80, -15, "Also yields 0-3 sunflower seeds"),
       new Crop("Tomato", "Summer", 11, 50, true, 4, 60, 9.26, ""),
+      new Crop("Corn", "Summer/Fall", 14, 150, true, 4, 50, 1.92, " GPD = 7.41 over 2 seasons "),
       new Crop("Wheat", "Summer/Fall", 4, 10, false, 0, 25, 3.75, ""),
       new Crop("Amaranth", "Fall", 7, 70, false, 0, 150, 7.43, ""),
       new Crop("Artichoke", "Fall", 8, 30, false, 0, 160, 16.25, "available starting year 2"),
@@ -45,9 +46,24 @@ export class CropCardComponent implements OnInit {
       new Crop("Grape", "Fall", 10, 60, true, 3, 80, 16.8, "Trellis"),
       new Crop("Pumpkin", "Fall", 13, 100, false, 0, 320, 16.92, "can become giant"),
       new Crop("Yam", "Fall", 10, 60, false, 0, 160, 10, ""),
-      new Crop("Cactus", "", 12, 150, true, 3, 75, 24.11, "only in greenhouse or indoor pots"),
-      new Crop("Ancient Fruit", "all", 28, 0, true, 7, 550, 57.14, "cart sells for 100-1,000g")
+      new Crop("Cactus", "Any Season", 12, 150, true, 3, 75, 24.11, "only in greenhouse or indoor pots"),
+      new Crop("Ancient Fruit", "Spring/Summer/Fall", 28, 0, true, 7, 550, 57.14, "cart sells for 100-1,000g")
     ]
     
   }
+  getColor(season) {
+    switch(season) {
+        case 'Spring':
+          return 'lightgreen';
+        case  'Summer':
+          return 'yellowgreen';
+        case 'Summer/Fall':
+          return 'goldenrod';
+        case 'Fall':
+          return'darkgoldenrod';
+        default: 
+          return 'gold'
+
+    }
+}
 }
