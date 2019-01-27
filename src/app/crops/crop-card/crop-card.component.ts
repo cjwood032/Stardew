@@ -32,7 +32,7 @@ export class CropCardComponent implements OnInit {
       new Crop("Red Cabbage", "Summer", 9, 100, false, 0, 260, 17.78, "available starting year 2"),
       new Crop("Starfruit", "Summer", 13, 400, false, 0, 750, 26.92, "only avail at oasis"),
       new Crop("Summer Spangle", "Summer", 8, 50, false, 0, 90, 5, ""),
-      new Crop("Sunflower", "Summer", 8, 200, false, 0, 80, -15, "Also yields 0-3 sunflower seeds"),
+      new Crop("Sunflower", "Summer", 8, 200, false, 0, 80, -15, "Also yields 0-3 seeds"),
       new Crop("Tomato", "Summer", 11, 50, true, 4, 60, 9.26, ""),
       new Crop("Corn", "Summer/Fall", 14, 150, true, 4, 50, 1.92, " GPD = 7.41 over 2 seasons "),
       new Crop("Wheat", "Summer/Fall", 4, 10, false, 0, 25, 3.75, ""),

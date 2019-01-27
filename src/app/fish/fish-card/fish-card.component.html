@@ -1,3 +1,10 @@
-<p>
-  fish-card works!
-</p>
+
+<div class="fish-container" *ngFor="let fish of fishes; index as i">
+  <div class="fishName" ><h3>{{fish.name}}</h3></div>
+  <div class="values">Value: {{fish.price}}g</div>
+  
+  <div class="climate" > Seasons<br>{{fish.season}}</div>
+  <div class="climate">Found: <br><strong>{{fish.location}}</strong> <br>{{fish.time}} </div>
+  <div class= "weather">Weather: {{fish.weather}}</div>
+  <div class="skill" [ngStyle]= "{'background-color':getFishColor(fish.difficulty)}">Difficulty Rating: {{fish.difficulty}} {{fish.behavior}}</div>
+</div>

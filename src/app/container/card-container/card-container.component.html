@@ -1,10 +1,10 @@
-<p>
-  card-container works!
-</p>
+
+
 <div class="main">
+    <a href="https://www.stardewvalley.net/">Official Game page</a>
   <div *ngIf="this.wantCrops">
-    <button (click)="toggleSelection()">Fish</button><br>
-    <app-crop-card></app-crop-card>
+  <button (click)="toggleSelection()">Fish</button><br>
+  <app-crop-card></app-crop-card>
   </div>
   <div *ngIf="this.wantFish">
     <button (click)="toggleSelection()">Crops</button><br>

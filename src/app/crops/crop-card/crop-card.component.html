@@ -1,9 +1,9 @@
 <div class="crop-container"[ngStyle]= "{'background-color':getColor(crop.season)}" *ngFor="let crop of crops; index as i">
- <div class="cropName"><h3>{{crop.name}}</h3></div>
- <div class="values">Cost: {{crop.cost}}g   Sells: {{crop.harvestValue}}g   GPD: {{crop.gpd}}g/d</div>
- <div class="growth">Grows during {{crop.season}} <br>in {{crop.growthTime}} days</div>
- <div *ngIf="crop.regrowth; else noRegrowth">Regrows every {{crop.regrowthTime}} days</div>
- <ng-template #noRegrowth><div>Only Grows once</div></ng-template>
- <div *ngIf="crop.additional!=''; else noDetails">{{crop.additional}}</div>
- <ng-template #noDetails><br></ng-template>
+    <div class="cropName"><h3>{{crop.name}}</h3></div>
+    <div class="values">Cost: {{crop.cost}}g   Sells: {{crop.harvestValue}}g<br>GPD: {{crop.gpd}}g/d</div>
+    <div class="growth">Grows during {{crop.season}} <br>in {{crop.growthTime}} days</div>
+    <div class ="growth" *ngIf="crop.regrowth; else noRegrowth">Regrows every {{crop.regrowthTime}} days</div>
+    <ng-template #noRegrowth><div class= "growth">Only grows once<br></div></ng-template>
+    <div class="additional" *ngIf="crop.additional!=''; else noDetails">{{crop.additional}}</div>
+    <ng-template #noDetails> <br></ng-template>
 </div>
