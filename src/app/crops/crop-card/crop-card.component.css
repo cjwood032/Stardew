@@ -1,0 +1,6 @@
+.crop-container{
+    border: 1px solid green;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px;
+}
