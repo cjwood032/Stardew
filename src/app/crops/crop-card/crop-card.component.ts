@@ -8,7 +8,7 @@ import {Crop} from '../../model/crop/crop'
 export class CropCardComponent implements OnInit {
   public crops: Array<Crop>
   constructor() { }
-
+//["name", "season", "growth_time", "cost", "regrowth", "regrowth_time", "harvest_value", "gpd", "extra"]
   ngOnInit() {
     this.crops =[ 
       new Crop("Blue Jazz", "Spring", 7, 30, false, 0, 50, 2.86, ""),
